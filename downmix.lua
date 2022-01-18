@@ -12,8 +12,8 @@ function setup_downmix()
         end
     else
         if downmix_on then
-            mp.command('af remove @downmix')
-            mp.command('af remove @volboost')
+            mp.command('no-osd af remove @downmix')
+            mp.command('no-osd af remove @volboost')
             mp.commandv('show-text', 'Disabling 5.1 downmixer', 2000)
             mp.commandv('print-text', 'Disabling 5.1 downmixer')
             downmix_on = false
